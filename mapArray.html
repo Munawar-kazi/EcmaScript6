@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map Array method</title>
+</head>
+<body>
+    <h1>Array map method in ES6</h1>
+    <h2 id="showdata"></h2>
+
+    
+</body>
+<script>
+    const oldArray=["Vinod","Bahadur","Thapa"];
+
+// //traditional javaScript method
+//     console.log(oldArray);
+//     console.log(oldArray[0]);
+//     console.log(oldArray[1]);
+//     console.log(oldArray[2]);
+
+    //now using map method
+   // let arr=["Vinod","Bahadur","Thapa"]
+   // let newArr =arr.map(function(currValue,index,arr){return;}); //structure of map method
+
+   /* const newArray=oldArray.map(function (cValue){
+        return cValue;
+    });
+
+    console.log(newArray);  //all value get 
+    //to get valueof an index number
+    console.log(newArray[0]);
+    console.log(newArray[1]);
+    console.log(newArray[2]);
+*/
+
+    //add some values  changes in array
+
+   /* const newArray=oldArray.map(function (cValue){
+        return cValue+"Thapa";
+    });
+
+    console.log(newArray);  //all value get 
+    console.log(newArray[0]); //thapa add
+    console.log(newArray[1]); //thapa add
+    console.log(newArray[2]); //thapa add
+*/
+//index number 
+
+/*
+ const newArray=oldArray.map(function(cValue,index){
+     return index+ " "+  "  :  "+cValue;
+ });
+
+ console.log(newArray);
+ console.log(newArray[0]); //with index number
+ console.log(newArray[1]); //with index number
+ console.log(newArray[2]); //with index number
+*/
+ //arr element or object show
+
+//which one array is present hint out
+/*
+ const newArray=oldArray.map(function(cValue,index,arr){
+    console.log(arr);
+
+    return index+" :  "+cValue;
+ });
+ console.log(newArray);
+  
+*/
+ //array of an object
+
+ const studentData=[
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+     /*{id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+
+
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+
+     {id:1,name:"bahadurr",degree:"MCA"},
+     {id:2,name:"thapa",degree:"BCA"},
+     {id:3,name:"Vinod",degree:"cs"},
+*/
+ ];
+ console.log(studentData); //all on=bjects shows 
+ console.log(studentData[0].name); //  object shows name
+ console.log(studentData[1].degree); //degree
+ console.log(studentData[2].id); //id
+
+
+ /*using fat Arrow method in map method*/
+
+
+
+ const newData=studentData.map((value)=>{
+     return `my name is ${value.name} and my Qualification degree is ${value.degree} and this my id : ${value.id} <br>`;
+ })
+ console.log(newData);
+   document.getElementById("showdata").innerHTML=newData;
+
+
+//  for removing commas used for in loop;
+ for(let key in newData){
+ document.write("<h2>"  +newData[key]+"</h2>");    
+
+ };
+// newData.forEach(loop);
+
+// function loop(value,index){
+//     document.write(value);
+
+// }
+ /* //forEachloop
+newData.forEach((value,i)=>{
+    document.write(value);
+
+
+})*/
+/*
+let object ={
+    first:"Ayyan ",
+    lastName:"kazi",
+    cont:7385926654
+
+};
+
+for(i in object){
+    document.write(" "+object[i]+"<br>");
+}
+*/
+
+
+
+</script>
+</html>
