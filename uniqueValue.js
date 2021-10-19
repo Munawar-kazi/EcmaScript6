@@ -1,7 +1,7 @@
 let Array=["a","b","c","d","e","a","c","a","f"];
 // console.log(Array);
 
-let Array1=["g","h","i","j","k","g","h","i","l","m"];
+let Array1=["g","h","i","j","k","g","h","i","l","m","o","p"];
 // console.log(Array1);
 
 let spread=[...Array,...Array1];  //using spread operator for concatonation two or more arrays
